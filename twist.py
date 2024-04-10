@@ -40,11 +40,7 @@ def twist(img_path, strength=1.0, radius=100,
     return twisted_img
 
 if __name__ == "__main__":
-    for i in range(1385, 1400):
-        for j in range(1710, 1735):
-            img = twist('face.jpeg', strength=17.15, radius=140.2,
-                        center=(i*0.1, j*0.1),
-                        decay_scale=1)
-            cv2.imwrite('unswirled_face.jpeg', img)
-            time.sleep(0.005)
-            print(f"i, j: ({i}, {j})")
+    img = twist('face.jpeg', strength=17.05, radius=140,
+                center=(139.9, 172.0),
+                decay_scale=0.995)
+    cv2.imwrite('unswirled_face.jpeg', img)
